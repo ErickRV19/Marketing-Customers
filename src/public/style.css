@@ -10,16 +10,19 @@ div .container{
     padding-top: 100px;
 }
 .navbar{
-  height: 100px;
-  font-size: 90px;
+  height: 70px;
+  font-size: 30px;
+}
+.navbar .navbar-brand{
+  font-size: 30px;
 }
 
 .navbar-expand-lg{
-    background-color: #c62828;
+    background-color: rgb(223, 6, 6);
 
 }
 .navbar-custom {
-    background-color: #c62828;
+    background-color: rgb(223, 6, 6);
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
