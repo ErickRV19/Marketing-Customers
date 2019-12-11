@@ -9,9 +9,14 @@
 div .container{
     padding-top: 100px;
 }
+.navbar{
+  height: 100px;
+  font-size: 90px;
+}
 
 .navbar-expand-lg{
     background-color: #c62828;
+
 }
 .navbar-custom {
     background-color: #c62828;
@@ -19,119 +24,32 @@ div .container{
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
 
+
+
+#subheader{
+  display: flex;
+  border-top: 10px;
+  padding-top: 20px;
+}
+#subheader h1{
+  padding-top: 60px;
+  font-size: 100px;
+  text-decoration: underline;
+  color: #393939;
+}
+
+.secproveedores h1{
+  color: #c62828;
+  text-decoration: underline overline;
+}
+
 body {
   overflow-x: hidden;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
 }
 
-/* Toggle Styles */
 
-#viewport {
-  padding-left: 250px;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-#content {
-  width: 100%;
-  position: relative;
-  margin-right: 0;
-}
-
-/* Sidebar Styles */
-
-#sidebar {
-  z-index: 1000;
-  position: fixed;
-  left: 250px;
-  width: 250px;
-  height: 100%;
-  margin-left: -250px;
-  overflow-y: auto;
-  background: #0D47A1;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-#sidebar header {
-  background-color: #0D47A1;
-  font-size: 20px;
-  line-height: 52px;
-  text-align: center;
-}
-
-#sidebar header a {
-  padding-top:20px ;
-  color: #fff;
-  display: block;
-  text-decoration: none;
-  font-size: 29px;
-}
-
-#sidebar header a:hover {
-  color: #fff;
-}
-
-
-#sidebar .nav a{
-  background: none;
-  color: #fff;
-  font-size: 22px;
-  padding: 26px 44px;
-}
-
-
-#sidebar .nav a:hover{
-  background: #fff;
-color: rgb(27, 58, 117) ;
-}
-h3{
-  color: #fff;
-}
-
-#sidebar .nav a i{
-  margin-right: 16px;
-}
-
-
-main.container {
-	display: table;
-	width: 100%;
-	margin-top: -50px;
-	padding: 0;
-	/*set left/right padding according to needs*/
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-main .row {
-	height: 100%;
-	display: table-row;
-}
-
-main .sidebar {
-	display: table-cell;
-	width: 200px;
-  padding-top: 70px;
-  padding-left: 50px;
-}
-
-main .content {
-	display: table-cell;
-	vertical-align: top;
-	padding-left: 10px;
-	padding-top: 30px;
-}
-
-/* Fin de los estilos de menu lateral */
-
-
-/* inicio estilos contenido */
 
 div .contenido{
   padding: 0px,30px;
@@ -139,15 +57,9 @@ div .contenido{
 }
 
 div .contenido .secproveedores{
-  padding-top: 100px;
+  padding-top: 0px;
 }
-div .contenido .secproductos{
-  padding-top: 100px;
-}
-div .contenido .secpedido{
-  padding-top: 100px;
-  padding-bottom: 300px;
-}
+
 div .headerCont{
   display: block;
   padding: 80px 20px 10px 30px;
@@ -198,7 +110,7 @@ div .btn-inicio{
 }
 
 .secproveedores{
-  padding: 90px;
+  padding: 0px 90px;
   background-color: #fff;
   margin: 30px;
 }
@@ -243,4 +155,8 @@ div .btn-inicio{
 #btn-color1{
   background-color: orange;
   color: #fff;
+}
+
+div .col-md-12{
+  padding-bottom: 90px;
 }
