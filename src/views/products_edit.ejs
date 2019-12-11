@@ -1,0 +1,36 @@
+<% include partials/_header %>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-5 offset-md-3 card">
+      <div class="card-body">
+        <form action="/updateProductos/<%= datas.IdProducto %>" method="POST">
+          <div class="form-group">
+            <input type="text" name="NombreLocal" value="<%= datas.IdProducto%>" placeholder="" class="form-control" autofocus>
+          </div>
+          <div class="form-group">
+            <input type="text" name="ApellidoDue" value="<%= datas.IdLocal%>" placeholder="" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="NombreDue" value="<%= datas.Producto%>" placeholder="" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="number" name="Telefono" value="<%= datas.Precio%>" placeholder="" class="form-control" autofocus>
+          </div>
+          <div class="form-group">
+            <input type="text" name="email" value="<%= datas.Descripcion%>" placeholder="" class="form-control">
+          </div>
+          
+
+          <button type="submit" class="btn btn-primary">
+            
+            Guardar Cambios
+            
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% include partials/_footer %>

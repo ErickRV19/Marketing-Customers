@@ -1,0 +1,132 @@
+<% include partials/_header %>
+
+
+
+<section class="secproveedores">
+    <h2 class="subtitle"   id="proveedores">Clientes - Negocios de comida</h2>
+    <p></p>
+    <h4 class="subtitle"   id="proveedores">Registro de los negocios de comida</h4>
+    <h6>Deberas ingresar primero los datos mas importantes del negocio para posteriormente registrar su menu</h6>
+    <p></p>
+        <form id="Proveedores-direccion" action="/add" method="post">
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputName">Nombre del Local</label>
+                    <input type="text" class="form-control" name="NombreLocal" placeholder="Doña Pelos">
+                  </div>
+                  
+                  <div class="form-group col-md-6">
+                    <label for="inputLastName">Apellido del dueño</label>
+                    <input type="text" class="form-control" name="ApellidoDue" placeholder="Apellido x">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputName2">Nombre del dueño</label>
+                    <input type="text" class="form-control" name="NombreDue" placeholder="Nombre x">
+                  </div>
+                  <div class="form-group col-md-2">
+                        <label for="inputPhone">Telefono</label>
+                        <input type="number" class="form-control" placeholder="55 #### ####" name="Telefono">
+                 </div>
+                 <div class="form-group col-md-6">
+                     <label for="inputEmail">Email</label>
+                     <input type="email" class="form-control" name="email" placeholder=" correo@gmail.com">
+                 </div>
+                 <div class="form-group col-md-9">
+                  <label for="inputState">Tipo de Pago</label>
+                  <select id="inputState" class="form-control" name="tipopago">
+                    <option selected>Selecciona</option>
+                    <option>...</option>
+                    <option>Pago Mensual de $ $$$$$</option>
+                    <option>Pago de 3 meses de $ $$$$$</option>
+                    <option>Pago de 6 meses de $ $$$$$</option>
+                    <option>Pago de 12 meses de $ $$$$$</option>
+                    
+                  </select> 
+                </div>
+                </div>
+                <button type="submit" class="btn" id="btn-color" >Registrar negocio</button>
+                <p></p>
+         </form>
+
+
+
+
+   
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <td>Id Local</td>
+            <td>Nombre del Local</td>
+            <td>Apellido del dueño</td>
+            <td>Nombre del dueño</td>
+            <td>Telefono</td>
+            <td>email</td>
+            <td>Tipo de pago</td>
+            <td>Actions</td>
+          </tr>
+        </thead>
+        <tbody>
+          <% if (data) { %>
+            <% for(var i = 0; i < data.length; i++) { %>
+              <tr>
+                <td><%= data[i].IdLocal %></td>
+                <td><%= data[i].NombreLocal %></td>
+                <td><%= data[i].ApellidoDue %></td>
+                <td><%= data[i].NombreDue %></td>
+                <td><%= data[i].Telefono %></td>
+                <td><%= data[i].email %></td>
+                <td><%= data[i].tipopago %></td>
+                <td>
+                  <a href="/update/<%= data[i].IdLocal %>" class="btn btn-info">Edit</a>
+                  <a href="/delete/<%= data[i].IdLocal %>" class="btn btn-danger">Delete</a>
+                </td>
+              </tr>
+            <% } %>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+<div>
+<p></p>
+  <div class="card-deck">
+    <div class="card">
+      <img src="/img/brujula.png" height="200" width="200">
+      
+      <div class="card-body">
+        <h5 class="card-title">Direcciones del Negocio</h5>
+        <p class="card-text">Añade la direccion del negocio para localizarlos en Google Maps, puedes introducir datos como calle , colonia, numero etc</p>
+        <p class="card-text"><small class="text-muted">Actualizado reciente</small></p>
+        <a onclick="location.href='/ConsultaDirecciones'" href="/listaDirecciones" type="sumit" class="btn btn-warning">Consultar</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="/img/menu.png" height="200" width="200"  alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Menu de los negocios</h5>
+        <p class="card-text">Aqui puedes dar de alta el menu de los negocios desde el costo hasta los nombres y demas </p>
+        <p class="card-text"><small class="text-muted">Actualizado reciente</small></p>
+        <a onclick="location.href='/products'" href="/listProductos" type="sumit" class="btn btn-warning">Consultar</a>
+      </div>
+    </div>
+    <div class="card" >
+      <img src="/img/ajuste.png" height="200" width="200">
+      <div class="card-body">
+        <h5 class="card-title">Proximamente..</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        <p class="card-text"><small class="text-muted">......</small></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+<% include partials/_footer %>

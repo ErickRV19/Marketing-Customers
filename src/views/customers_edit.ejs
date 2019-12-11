@@ -1,0 +1,47 @@
+<% include partials/_header %>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-5 offset-md-3 card">
+      <div class="card-body">
+        <form action="/update/<%= data.IdLocal %>" method="POST">
+          <div class="form-group">
+            <input type="text" name="NombreLocal" value="<%= data.NombreLocal%>" placeholder="" class="form-control" autofocus>
+          </div>
+          <div class="form-group">
+            <input type="text" name="ApellidoDue" value="<%= data.ApellidoDue%>" placeholder="" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="NombreDue" value="<%= data.NombreDue%>" placeholder="" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="number" name="Telefono" value="<%= data.Telefono%>" placeholder="" class="form-control" autofocus>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" value="<%= data.email%>" placeholder="" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="inputSt">Tipo de Pago</label>
+            <select id="inputS" class="form-control" name="tipopago">
+              <option selected>Selecciona</option>
+              <option>...</option>
+              <option>Pago Mensual de $ $$$$$</option>
+              <option>Pago de 3 meses de $ $$$$$</option>
+              <option>Pago de 6 meses de $ $$$$$</option>
+              <option>Pago de 12 meses de $ $$$$$</option>
+              
+            </select> 
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            
+            Guardar Cambios
+            
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% include partials/_footer %>
