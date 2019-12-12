@@ -11,10 +11,10 @@ div .container{
 }
 .navbar{
   height: 70px;
-  font-size: 30px;
+  font-size: 25px;
 }
 .navbar .navbar-brand{
-  font-size: 30px;
+  font-size: 35px;
 }
 
 .navbar-expand-lg{
