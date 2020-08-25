@@ -12,3 +12,9 @@ Este repositorio tiene un proyecto para negocios con el cual puedes controlar su
 
 ![Imagen](https://raw.githubusercontent.com/ErickRV19/ErickRV19.github.io/master/img/proyectos/control%20negocios.png "imagen")
 
+![Imagen](https://raw.githubusercontent.com/ErickRV19/Marketing-Customers/master/src/public/img/github/preview%202.png "imagen")
+
+![Imagen](https://raw.githubusercontent.com/ErickRV19/Marketing-Customers/master/src/public/img/github/preview%201.png "imagen")
+
+![Imagen](https://raw.githubusercontent.com/ErickRV19/Marketing-Customers/master/src/public/img/github/preview%204.png "imagen")
+
